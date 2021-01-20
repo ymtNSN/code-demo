@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.example.demo.design.factory.AbstractTradeFactory</OriginalElement>
+  <nodes>
+    <node x="0.0" y="402.0">com.example.demo.design.factory.AppTrader</node>
+    <node x="1.5" y="151.0">com.example.demo.design.factory.TradeFactory</node>
+    <node x="140.0" y="402.0">com.example.demo.design.factory.StoreTrader</node>
+    <node x="0.0" y="0.0">com.example.demo.design.factory.AbstractTradeFactory</node>
+    <node x="150.0" y="297.0">com.example.demo.design.factory.Trader</node>
+    <node x="296.0" y="402.0">com.example.demo.design.factory.WishTrader</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.example.demo.design.factory.AppTrader" target="com.example.demo.design.factory.Trader">
+      <point x="0.0" y="-27.5" />
+      <point x="60.0" y="377.0" />
+      <point x="169.33333333333334" y="377.0" />
+      <point x="-38.66666666666666" y="27.5" />
+    </edge>
+    <edge source="com.example.demo.design.factory.TradeFactory" target="com.example.demo.design.factory.AbstractTradeFactory">
+      <point x="0.0" y="-50.5" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="com.example.demo.design.factory.StoreTrader" target="com.example.demo.design.factory.Trader">
+      <point x="0.0" y="-27.5" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="com.example.demo.design.factory.WishTrader" target="com.example.demo.design.factory.Trader">
+      <point x="0.0" y="-27.5" />
+      <point x="360.0" y="377.0" />
+      <point x="246.66666666666666" y="377.0" />
+      <point x="38.66666666666666" y="27.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="212.0" y="228.5" />
+  <SelectedNodes>
+    <node>com.example.demo.design.factory.AbstractTradeFactory</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
