@@ -9,7 +9,7 @@ import com.example.demo.ddd.service.AccountTransferService;
 import com.example.demo.ddd.service.AuditMessageProducer;
 import com.example.demo.ddd.service.ExchangeRateService;
 import com.example.demo.ddd.service.TransferService;
-import com.hpcang.commons.base.result.Result;
+//import com.hpcang.commons.base.result.Result;
 
 import java.math.BigDecimal;
 

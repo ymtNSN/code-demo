@@ -7,7 +7,7 @@ import com.example.demo.service.DemoService;
 //import com.user.sdk.controller.BaseController;
 //import com.user.sdk.response.AppUserVO;
 //import com.user.sdk.response.BaseResponse;
-import com.hpcang.icposauth.sdk.annotation.HasPermission;
+//import com.hpcang.icposauth.sdk.annotation.HasPermission;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
