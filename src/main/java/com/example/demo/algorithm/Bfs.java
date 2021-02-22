@@ -1,9 +1,8 @@
 package com.example.demo.algorithm;
 
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Set;
+import org.apache.commons.lang.text.StrBuilder;
+
+import java.util.*;
 
 /**
  * Created by @author ymtNSN on 2021/2/3
@@ -73,4 +72,60 @@ public class Bfs {
         }
         return new String(ch);
     }
+
+
+    // 滑动拼图
+    static int slidingPuzzle(int[][] board) {
+
+        int[][] neighbor = {
+                {1, 3},
+                {0, 4, 2},
+                {1, 5},
+                {0, 4},
+                {3, 1, 5},
+                {4, 2}
+        };
+        int m = 2, n = 3;
+        String start = "";
+        String target = "123450";
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                start += board[i][j] + '0';
+            }
+        }
+        Queue<String> queue = new LinkedList<>();
+        queue.add(start);
+        Set<String> visited = new HashSet<>();
+        visited.add(start);
+
+        int step = 0;
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                String cur = queue.poll();
+                if (cur.equals(target)) {
+                    return step;
+                }
+                // 找到目前‘0’的索引
+                int idx = 0;
+                for (; cur.charAt(idx) != '0'; idx++) {
+                    ;
+                }
+                // 将‘0’相邻数字交换
+                for (int adj : neighbor[idx]) {
+                    StrBuilder sb = new StrBuilder(cur);
+                    sb.setCharAt(idx, cur.charAt(adj));
+                    sb.setCharAt(adj, cur.charAt(idx));
+                    String newBoard = sb.toString();
+                    if (!visited.contains(newBoard)) {
+                        queue.add(newBoard);
+                        visited.add(newBoard);
+                    }
+                }
+            }
+            step++;
+        }
+        return -1;
+    }
+
 }

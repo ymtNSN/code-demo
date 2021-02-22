@@ -26,6 +26,8 @@ public class NHuangHou {
     private static void calnQueens(int row, int n, int[] result) {
         if (row == n) {
             getPrint(result);
+            System.out.println("------------");
+
             return;
         }
         for (int column = 0; column < n; column++) {
@@ -62,4 +64,19 @@ public class NHuangHou {
         }
         res.add(one);
     }
+
+    void calnQueens2(int row, int n, int[] result) {
+        if (row == n) {
+            getPrint(result);
+            return;
+        }
+        for (int i = 0; i < n; i++) {
+            if (isOk(row, i, result)) {
+                result[row] = i;
+                calnQueens2(row + 1, n, result);
+            }
+        }
+
+    }
+
 }
