@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * 分治
  * Created by @author ymtNSN on 2021/2/22
  */
 public class Divide {

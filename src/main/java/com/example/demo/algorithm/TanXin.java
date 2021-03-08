@@ -9,7 +9,7 @@ import java.util.Comparator;
 public class TanXin {
 
     public static void main(String[] args) {
-        int[][] points ={{-2147483646,-2147483645},{2147483646,2147483647}};
+        int[][] points = {{-2147483646, -2147483645}, {2147483646, 2147483647}};
 //        int[][] points ={{10,16},{2,8},{1,6},{7,12}};
         int minArrowShots = findMinArrowShots(points);
         System.out.println(minArrowShots);
@@ -44,4 +44,33 @@ public class TanXin {
         }
         return count;
     }
+
+    // 跳跃
+    boolean canJump(int[] nums) {
+        int n = nums.length;
+        int farther = 0;
+        for (int i = 0; i < n; i++) {
+            farther = Math.max(farther, i + nums[i]);
+            if (farther <= i) {
+                return false;
+            }
+        }
+        return farther >= n - 1;
+    }
+
+    // 最少步数
+    int jump(int[] nums) {
+        int n = nums.length;
+        int farther = 0, end = 0;
+        int step = 0;
+        for (int i = 0; i < n; i++) {
+            farther = Math.max(farther, i + nums[i]);
+            if (end == i) {
+                end = farther;
+                step++;
+            }
+        }
+        return step;
+    }
+
 }
